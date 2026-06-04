@@ -1,6 +1,6 @@
 {
   "name": "fake-ff",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fake Free Fire lobby card generator",
   "main": "index.js",
   "engines": {
