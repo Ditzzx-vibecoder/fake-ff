@@ -131,12 +131,12 @@ async function generateFF({ username = 'Player', lobby = null, outputDir = './' 
 
   if (config.debug) drawDebugSafeZone(ctx, config.username)
 
-  const buffer = await canvas.encode('png')
+  const buffer = await canvas.encode('jpeg', 100)
 
   const outputFolder = path.join(outputDir, 'fake-ff')
   if (!fs.existsSync(outputFolder)) fs.mkdirSync(outputFolder, { recursive: true })
 
-  const outputPath = path.join(outputFolder, `${username}.png`)
+  const outputPath = path.join(outputFolder, `${username}.jpg`)
   fs.writeFileSync(outputPath, buffer)
 
   return {
